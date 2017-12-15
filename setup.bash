@@ -15,6 +15,11 @@ set autoindent
 set expandtab
 set tabstop=2
 set shiftwidth=2
+
+" make
+autocmd BufRead,BufNewFile Makefile setfiletype make
+autocmd FileType make set noexpandtab
+
 " plugins
 set runtimepath+=~/.vim.d/bundle/nerdtree
 EOF
