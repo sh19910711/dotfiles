@@ -3,14 +3,14 @@ source helper.bash
 
 clone https://github.com/scrooloose/nerdtree ~/.vim.d/bundle/nerdtree
 cat <<EOF > ~/.vimrc
-set nocompatible
-"
+" ui
 syntax off
 set number
 set relativenumber
 set colorcolumn=80
 set hlsearch
-"
+
+" edit
 set autoindent
 set expandtab
 set tabstop=2
