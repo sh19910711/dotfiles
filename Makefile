@@ -6,3 +6,9 @@ tools/vim:
 
 tools/gcloud:
 	bash tools/gcloud.bash
+
+tools/awscli:
+	bash tools/awscli.bash
+
+tools/anyenv:
+	bash tools/anyenv.bash
