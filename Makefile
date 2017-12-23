@@ -1,5 +1,8 @@
 setup:
 	bash setup.bash
 
-vim:
+tools/vim:
 	sudo bash tools/vim.bash
+
+tools/gcloud:
+	bash tools/gcloud.bash
