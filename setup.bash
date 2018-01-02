@@ -1,6 +1,7 @@
 set -eu
 source helper.bash 
 
+### Vim
 clone https://github.com/scrooloose/nerdtree ~/.vim.d/bundle/nerdtree
 cat <<EOF > ~/.vimrc
 " ui
@@ -23,3 +24,7 @@ autocmd FileType make set noexpandtab
 " plugins
 set runtimepath+=~/.vim.d/bundle/nerdtree
 EOF
+
+### Git
+git config --global user.name  'Hiroyuki Sano'
+git config --global user.email 'sh19910711@gmail.com'
