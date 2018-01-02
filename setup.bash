@@ -28,3 +28,10 @@ EOF
 ### Git
 git config --global user.name  'Hiroyuki Sano'
 git config --global user.email 'sh19910711@gmail.com'
+
+### tmux
+cat <<EOF > ~/.tmux.conf
+set -g prefix C-a
+unbind C-b
+setw -g mode-keys vi
+EOF
