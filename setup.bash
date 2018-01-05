@@ -1,5 +1,5 @@
 set -eu
-source helper.bash 
+source $(cd $(dirname $0); pwd)/helper.bash
 
 ### Vim
 clone https://github.com/scrooloose/nerdtree ~/.vim.d/bundle/nerdtree
