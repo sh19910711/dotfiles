@@ -35,3 +35,11 @@ set -g prefix C-a
 unbind C-b
 setw -g mode-keys vi
 EOF
+
+### ssh
+mkdir -p ~/.ssh
+cat <<EOF > ~/.ssh/config
+Host github.com
+  User git
+  IdentityFile ~/.ssh/id_github
+EOF
