@@ -43,3 +43,19 @@ Host github.com
   User git
   IdentityFile ~/.ssh/id_github
 EOF
+
+### x11
+cat <<EOF > ~/.xinitrc
+export DefaultImModule=fcitx
+export GTK_IM_MODULE=fcitx
+export QT_IM_MODULE=fcitx
+export XMODIFIERS="@im=fcitx"
+EOF
+
+cat <<EOF > ~/.Xdefaults
+urxvt*inputMethod: fcitx
+urxvt*font: xft:Noto Mono:size=10,\
+  xft:Noto Emoji:size=10,\
+  xft:Noto Sans CJK JP:size=10,\
+  xft:monospace:size=10
+EOF
