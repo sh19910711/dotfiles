@@ -26,6 +26,7 @@ set runtimepath+=~/.vim.d/bundle/nerdtree
 EOF
 
 ### Git
+git config --global core.editor 'vim'
 git config --global user.name  'Hiroyuki Sano'
 git config --global user.email 'sh19910711@gmail.com'
 
