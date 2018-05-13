@@ -44,6 +44,7 @@ Host github.com
   User git
   IdentityFile ~/.ssh/id_github
 EOF
+chmod go-rwx ~/.ssh/config
 
 ### x11
 cat <<EOF > ~/.xinitrc
