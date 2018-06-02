@@ -54,7 +54,7 @@ export QT_IM_MODULE=fcitx
 export XMODIFIERS="@im=fcitx"
 EOF
 
-cat <<EOF > ~/.Xdefaults
+cat <<EOF > ~/.Xresources
 urxvt*inputMethod: fcitx
 urxvt*font: xft:Noto Mono:size=10,\
   xft:Noto Emoji:size=10,\
