@@ -47,17 +47,26 @@ EOF
 chmod go-rwx ~/.ssh/config
 
 ### x11
-cat <<EOF > ~/.xinitrc
+cat <<EOF | tee ~/.xinitrc
 export DefaultImModule=fcitx
 export GTK_IM_MODULE=fcitx
 export QT_IM_MODULE=fcitx
 export XMODIFIERS="@im=fcitx"
 EOF
 
-cat <<EOF > ~/.Xresources
+cat <<EOF | tee ~/.Xresources
 urxvt*inputMethod: fcitx
-urxvt*font: xft:Noto Mono:size=10,\
+urxvt*font: xft:Noto Sans Mono:size=10,\
+  xft:Noto Sans Mono CJK JP:size=10,\
   xft:Noto Emoji:size=10,\
-  xft:Noto Sans CJK JP:size=10,\
   xft:monospace:size=10
+EOF
+
+cat <<EOF | sudo tee /etc/X11/xorg.conf.d/00-capslock.conf
+Section "InputClass"
+  Identifier "system-keyboard"
+  MatchIsKeyboard "on"
+  Option "XkbLayout" "us"
+  Option "XkbOptions" "ctrl:swapcaps"
+EndSection
 EOF
