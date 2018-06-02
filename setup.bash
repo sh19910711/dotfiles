@@ -1,5 +1,11 @@
 set -eu
-source $(cd $(dirname $0); pwd)/helper.bash
+
+clone() {
+  [[ ! -d $2 ]] && git clone $@
+  pushd $2
+  git pull origin master
+  popd
+}
 
 ### Vim
 clone https://github.com/scrooloose/nerdtree ~/.vim.d/bundle/nerdtree
