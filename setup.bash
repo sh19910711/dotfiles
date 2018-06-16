@@ -36,6 +36,11 @@ git config --global core.editor 'vim'
 git config --global user.name  'Hiroyuki Sano'
 git config --global user.email 'sh19910711@gmail.com'
 
+mkdir -p ~/.config/git
+cat <<EOF | tee ~/.config/git/ignore
+*.swp
+EOF
+
 ### tmux
 cat <<EOF > ~/.tmux.conf
 set -g prefix C-a
