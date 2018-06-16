@@ -7,7 +7,18 @@ clone() {
   popd
 }
 
-### Vim
+### bash
+mkdir -p ~/.bash.d
+cat <<EOF | tee ~/.bashrc
+for x in ~/.bash.d/*.bash; do
+  source \$x
+done
+EOF
+cat <<EOF | tee ~/.bash.d/golang.bash
+export GOPATH=\$HOME/go
+EOF
+
+### vim
 clone https://github.com/scrooloose/nerdtree ~/.vim.d/bundle/nerdtree
 cat <<EOF > ~/.vimrc
 " ui
@@ -31,7 +42,7 @@ autocmd FileType make set noexpandtab
 set runtimepath+=~/.vim.d/bundle/nerdtree
 EOF
 
-### Git
+### git
 git config --global core.editor 'vim'
 git config --global user.name  'Hiroyuki Sano'
 git config --global user.email 'sh19910711@gmail.com'
