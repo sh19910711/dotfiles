@@ -14,6 +14,11 @@ for x in ~/.bash.d/*.bash; do
   source \$x
 done
 EOF
+
+cat <<EOF | tee ~/.bash.d/bash.bash
+PS1="[\u@\h \W]\$ "
+EOF
+
 cat <<EOF | tee ~/.bash.d/golang.bash
 export GOPATH=\$HOME/go
 EOF
