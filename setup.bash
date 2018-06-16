@@ -68,6 +68,7 @@ urxvt*font: xft:Noto Sans Mono:size=10,\
   xft:monospace:size=10
 EOF
 
+sudo mkdir -p /etc/X11/xorg.conf.d
 cat <<EOF | sudo tee /etc/X11/xorg.conf.d/00-capslock.conf
 Section "InputClass"
   Identifier "system-keyboard"
