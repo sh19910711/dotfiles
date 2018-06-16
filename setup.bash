@@ -39,6 +39,7 @@ git config --global user.email 'sh19910711@gmail.com'
 mkdir -p ~/.config/git
 cat <<EOF | tee ~/.config/git/ignore
 *.swp
+tmp/
 EOF
 
 ### tmux
