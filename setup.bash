@@ -23,6 +23,21 @@ cat <<EOF | tee ~/.bash.d/golang.bash
 export GOPATH=\$HOME/go
 EOF
 
+cat <<EOF | tee ~/.bash.d/zeppelin.bash
+zeppelin() {
+  docker run \
+    --name zeppelin \
+    --rm \
+    -ti \
+    -p 8080:8080 \
+    -v $HOME/.ssh:/root/.ssh \
+    -e ZEPPELIN_NOTEBOOK_STORAGE=org.apache.zeppelin.notebook.repo.S3NotebookRepo \
+    -e ZEPPELIN_NOTEBOOK_S3_BUCKET=cloud9-tmp \
+    -e ZEPPELIN_NOTEBOOK_S3_USER=zeppelin/notebook \
+    apache/zeppelin:0.7.3
+}
+EOF
+
 ### vim
 clone https://github.com/scrooloose/nerdtree ~/.vim.d/bundle/nerdtree
 cat <<EOF > ~/.vimrc
