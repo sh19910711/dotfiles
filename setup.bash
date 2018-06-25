@@ -49,6 +49,7 @@ set colorcolumn=80
 set hlsearch
 
 " edit
+set encoding=utf-8
 set autoindent
 set expandtab
 set tabstop=2
