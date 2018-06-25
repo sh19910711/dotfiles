@@ -40,7 +40,7 @@ EOF
 
 ### vim
 clone https://github.com/scrooloose/nerdtree ~/.vim.d/bundle/nerdtree
-cat <<EOF > ~/.vimrc
+cat <<EOF | tee ~/.vimrc
 " ui
 syntax off
 set number
@@ -60,6 +60,10 @@ autocmd FileType make set noexpandtab
 
 " plugins
 set runtimepath+=~/.vim.d/bundle/nerdtree
+
+" nerdtree
+let g:NERDTreeDirArrowExpandable="+"
+let g:NERDTreeDirArrowCollapsible="~"
 EOF
 
 ### git
