@@ -15,6 +15,8 @@ for x in ~/.bash.d/*.bash; do
 done
 EOF
 
+curl https://raw.githubusercontent.com/git/git/v2.14.5/contrib/completion/git-completion.bash > ~/.bash.d/git.bash
+
 cat <<EOF | tee ~/.bash.d/bash.bash
 PS1="[\u@\h \W]\$ "
 EOF
