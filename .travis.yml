@@ -1,0 +1,7 @@
+language: bash
+script:
+- make
+- bash tools/vim.bash
+- bash tools/gcloud.bash
+- bash tools/awscli.bash
+- bash tools/anyenv.bash
