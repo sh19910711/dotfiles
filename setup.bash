@@ -92,7 +92,7 @@ mkdir -p ~/.ssh
 cat <<EOF > ~/.ssh/config
 Host github.com
   User git
-  IdentityFile ~/.ssh/id_github
+  IdentityFile ~/.ssh/id_github_sh19910711
 EOF
 chmod go-rwx ~/.ssh/config
 
