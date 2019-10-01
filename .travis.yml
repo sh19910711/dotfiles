@@ -2,7 +2,5 @@ language: bash
 install:
 - make
 - bash tools/vim.bash
-- bash tools/anyenv.bash
 script:
 - vim --version
-- anyenv --version
