@@ -1,7 +1,8 @@
 language: bash
-script:
+install:
 - make
 - bash tools/vim.bash
-- bash tools/gcloud.bash
-- bash tools/awscli.bash
 - bash tools/anyenv.bash
+script:
+- vim --version
+- anyenv --version
