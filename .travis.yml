@@ -4,3 +4,7 @@ install:
 - bash tools/vim.bash
 script:
 - vim --version
+notifications:
+  slack:
+    on_success: always
+    on_failure: always
