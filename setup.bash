@@ -42,6 +42,7 @@ EOF
 
 ### vim
 clone https://github.com/scrooloose/nerdtree ~/.vim.d/bundle/nerdtree
+curl -fLo ~/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/c3b6b7c2971da730d66f6955d5c467db8dae536b/plug.vim
 cat <<EOF | tee ~/.vimrc
 " ui
 syntax off
@@ -67,6 +68,14 @@ set runtimepath+=~/.vim.d/bundle/nerdtree
 " nerdtree
 let g:NERDTreeDirArrowExpandable="+"
 let g:NERDTreeDirArrowCollapsible="~"
+
+" lsp
+call plug#begin('~/.vim/plugged')
+Plug 'prabirshrestha/async.vim'
+Plug 'prabirshrestha/vim-lsp'
+Plug 'mattn/vim-lsp-settings'
+call plug#end()
+setlocal omnifunc=lsp#complete
 EOF
 
 ### git
