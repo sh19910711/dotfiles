@@ -11,7 +11,7 @@ WORKDIR /opt/vim
 RUN curl -s -L https://github.com/vim/vim/archive/v$VIM_VERSION.tar.gz | tar zxf -
 RUN cd vim-$VIM_VERSION && \
   ./configure \
-    --prefix=/usr/local/vim && \
+    --prefix=/usr/local && \
   make && \
-  make install
-RUN tar czvf ./package.tar.gz /usr/local/vim
+  make install DESTDIR=/opt/vim/pkg
+RUN cd /opt/vim/pkg && tar zcvf ../package.tar.gz ./
