@@ -23,6 +23,7 @@ jobs:
         path: docker/build_vim_debian_9_12/package.tar.gz
 
     - name: Create Release
+      id: create_release
       uses: actions/create-release@v1
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
