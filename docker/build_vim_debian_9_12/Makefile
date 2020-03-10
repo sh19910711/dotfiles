@@ -1,4 +1,4 @@
-.PHONY:
+.PHONY: build
 build:
 	docker build -t vim ./
 	echo $(shell \
